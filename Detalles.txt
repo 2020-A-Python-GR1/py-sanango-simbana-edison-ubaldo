@@ -1,0 +1,5 @@
+DETALLES 
+
+- Para cambiar la ruta de Jupyter notebook => stackoverflow://https.com/questions/35254852/how-to-change-the-jupyter-start-up-folder
+- En caso de problemas por permisos de accesso a Jupyter > (https://github.com/jupyter/jupyter/issues/401)  >>>> The solution would be either upgrading notebook to version 5.7.5, or downgrading tornado to version 5.1.1. Se debe instalar Jupter 5.6.0 'pip install notebook==5.6.0' e tornado 'pip install tornado==5.7.5'
+
