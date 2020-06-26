@@ -1,3 +1,2 @@
 Ciudad;ZonaHoraria;PrefijoTelefonico;Superficie(Km2);Poblacion
 
-Sidney;1;06;1287.36;2872800; 

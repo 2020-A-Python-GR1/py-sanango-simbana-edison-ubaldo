@@ -1,3 +1,2 @@
 Pais;PIB($bi);IDH;Moneda;Mas de un idioma;Ciudades
 
-Austria;3444;0.891;Euro;True;a; 
