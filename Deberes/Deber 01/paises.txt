@@ -1,0 +1,2 @@
+Pais;PIB($bi);IDH;Moneda;Mas de un idioma;Ciudades
+
