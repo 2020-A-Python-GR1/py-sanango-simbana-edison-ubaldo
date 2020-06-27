@@ -1,2 +1,7 @@
 Pais;PIB($bi);IDH;Moneda;Mas de un idioma;Ciudades
 
+España;500;0.897;Euro;False;_Madrid; 
+Italia;1000;0.907;Euro;False;_Roma; 
+Suecia;1000;0.927;Euro;True;_Estocolmo; 
+Ecuador;70;0.807;Dolar;True;_Cuenca_Quito; 
+Rusia;2000;0.827;Rublo;True;_Moscú; 
