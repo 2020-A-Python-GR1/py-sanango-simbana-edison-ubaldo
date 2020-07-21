@@ -1,8 +1,7 @@
 Ciudad;ZonaHoraria;PrefijoTelefonico;Superficie(Km2);Poblacion
 
-Quito;5;593;400;3000000; 
+Quito;5;593;3;3000000; 
 Roma;1;6;2000;12000000; 
 Madrid;1;9;5000.34;10000000; 
-Estocolmo;3;92;1345.23;10000000; 
-Moscú;3;493;134523.23;12000000; 
 Cuenca;5;593;345;1000000; 
+Moscú;5;34;456983;15000000; 
