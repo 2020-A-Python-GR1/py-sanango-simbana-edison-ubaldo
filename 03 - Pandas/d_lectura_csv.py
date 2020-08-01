@@ -17,7 +17,7 @@ data = data[columnas]
 
 # se puede setear un índice de cualquiera de las dos formas
 data = data.set_index('id')
-data1 = pd.read_csv(path, nrows=10, index_col ='id')
+data1 = pd.read_csv(path, nrows=10, index_col ='id', usecols=columnas)
 
 
 path_guardado = "./data/artwork_data.pickle"
