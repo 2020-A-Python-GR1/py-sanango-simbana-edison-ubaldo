@@ -82,3 +82,57 @@ sub_df.to_json('data/artistas.json')
 
 sub_df.to_json('artistas_tabla.json', orient= 'table')
 
+
+
+################################################ DEBER CHART
+
+
+import pandas as pd
+import numpy as np
+import xlsxwriter
+import xlsxwriter
+
+path_excel_colores = "./data/artwork_data_colores.xlsx"
+
+workbook = xlsxwriter.Workbook(path_excel_colores)
+sheet_name = 'Artistas'
+worksheet = workbook.add_worksheet(sheet_name)
+
+path_guardado = "./data/artwork_data.pickle"
+df = pd.read_pickle(path_guardado)
+sub_df = df.iloc[49980:50519,:].copy()
+
+data = sub_df['artist'].value_counts()
+data = data[data > 1].sort_values(ascending=True)
+artistas = np.array(data.index.tolist())
+cantidad = np.array(data.values.tolist())
+
+columnas = ['Artista', 'Cantidad']
+
+worksheet.write_row('A1',columnas)
+worksheet.write_column('A2',artistas)
+worksheet.write_column('B2',cantidad)
+
+chart = workbook.add_chart({'type': 'bar'})
+
+tamanio = len(data) + 1
+
+chart.add_series({
+    'categories': '={}!$A$2:$A${}'.format(sheet_name,tamanio),
+    'values': '={}!$B$2:$B${}'.format(sheet_name,tamanio),
+    'data_labels': {'value':True},
+    'fill': {'color':'#67F1A4'}
+    })
+
+chart.set_title({'name': 'Cantidad por artista'})
+chart.set_x_axis({'name': 'Cantidad','major_gridlines': {'visible': False}})
+chart.set_y_axis({'name': 'Artista'})
+chart.set_legend({'none': True})
+worksheet.insert_chart('E4',chart,{'x_scale': 2.5, 'y_scale':2.5})
+workbook.close()
+
+
+
+
+
+
