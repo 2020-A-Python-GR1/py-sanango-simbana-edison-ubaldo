@@ -83,3 +83,40 @@ def transformar_df(df):
     return df_completo
 
 df_lleno = transformar_df(seccion_df)
+
+
+
+
+
+
+
+
+
+
+
+
+
+# PROYECTO
+
+# BUSCAR UN TEMA ESPECÍFICO UN .CSV O ALGO ASÍ
+# USAR MARKDOWN EN JUPYTER
+# hacer un informe no-tecnico como para la gerencia
+# graficos con pyplot
+# plantear preguntar y responderlas
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
