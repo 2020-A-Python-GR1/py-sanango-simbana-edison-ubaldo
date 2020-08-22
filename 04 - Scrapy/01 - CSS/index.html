@@ -35,6 +35,12 @@
         /*            JERARQUIA: STYLE > ID > CLASS > ETIQUETA        */
 
         /* Etiqueta dentro de otra etiqueta*/
+        li > p.epn.uno {
+            background-color: green;
+        }
+        li > p.epn {
+            background-color: red;
+        }
         body > ul > li > p {
             background-color: orange;
         }
@@ -49,9 +55,11 @@
     <p>Parrafo dos </p>
     <p class="fondo-rojo">Parrafo tres</p>
     <ul>
+        <li><p class="epn uno">CERO</p></li>
         <li>UNO </li>
         <li><p>DOS</p></li>
         <li>TRES</li>
+        <li><p class="epn">CUATRO</p></li>
     </ul>
 
     <li><p>FUERA DE UL</p></li>
