@@ -12,6 +12,7 @@ class IntroSpider(scrapy.Spider):
             yield scrapy.Request(url=url)
 
 
+
     def parse(self, response):
         etiqueta_contenedora = response.css(
             'article.product_pod'

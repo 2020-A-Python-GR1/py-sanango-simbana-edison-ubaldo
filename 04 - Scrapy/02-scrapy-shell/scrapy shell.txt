@@ -33,7 +33,9 @@ Out[47]:
 In [48]: len(response.css('div.quote > span > small.author::text').extract())                                                                                                                                      
 Out[48]: 10
 
-In [49]:                                                      
+## PARA OBTENER ATRIBUTOS MEDIANTE CSS, SE ESTABLECE ::attr(atribtuo)
+
+response.css('div.quote > span > a::attr(href)').extract()                                 
 
 
 ********************************** XPATH
@@ -137,3 +139,15 @@ Out[65]:
  '/author/Thomas-A-Edison',
  '/author/Eleanor-Roosevelt',
  '/author/Steve-Martin']
+
+
+
+## OBTENER EL TEXTO DE ALGUNA ETIQUETA CON XPATH
+
+ response.xpath('//*[@id="mw-content-text"]/div[1]/table[2]/tbody/tr/td/a/text()').extract() 
+
+
+## SI QUIERO SOLO UNA COLUMNA EN ESPECÍFICO, ME DEBO FIJAR EN SU POSICIO. EN ESTE CASO EL TD[1] 
+## ES LA COLUMNA DE LOS AÑOS ENTONCES SOLO EXTRAIGO ESA, ASÍ SE PUEDE HACER CON CUALQUIER COLUMNA
+
+response.xpath('//*[@id="mw-content-text"]/div[1]/table[2]/tbody/tr/td[1]/a/text()').extract() 
